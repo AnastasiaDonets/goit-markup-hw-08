@@ -799,6 +799,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin-bottom: 50px;
+  background-color: aquamarine;
 }
 @media screen and (min-width: 1200px) {
   .clients__title {
