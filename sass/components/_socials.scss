@@ -1,0 +1,29 @@
+.socials {
+  @include flexCenter($type: flex, $main-axis: center);
+  gap: 10px;
+  margin-bottom: 30px;
+
+  &__link {
+    @include flexCenter($type: flex, $main-axis: center, $cross-axis: center);
+    width: 44px;
+    height: 44px;
+    background-color: var(--main-background-color);
+    border-radius: 50%;
+    transition: background-color var(--animation);
+
+    &--focused:hover,
+    &--focused:focus {
+      background-color: var(--accent-background-color);
+    }
+
+    &--focused:hover .socials__icon,
+    &--focused:focus .socials__icon {
+      fill: var(--secondary-accent-color);
+    }
+  }
+
+  &__icon {
+    fill: var(--socials-icon-color);
+    transition: fill var(--animation);
+  }
+}

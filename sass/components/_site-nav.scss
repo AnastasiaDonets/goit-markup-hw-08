@@ -1,0 +1,52 @@
+.header__nav {
+  @include flexCenter($type: flex);
+
+  &__list {
+    display: none;
+    @media screen and (min-width: 768px) {
+      @include flexCenter($type: flex);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    color: var(--main-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color var(--animation);
+
+    &--focused:hover,
+    &--focused:focus {
+      color: var(--acent-text-color);
+    }
+
+    &--focused::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+
+      display: block;
+      width: 100%;
+      height: 4px;
+
+      background-color: var(--acent-text-color);
+      border-radius: 2px;
+      bottom: -1.5%;
+      opacity: 0;
+    }
+
+    &.current::after {
+      opacity: 1;
+    }
+  }
+
+  &__link.current {
+    color: var(--acent-text-color);
+  }
+}

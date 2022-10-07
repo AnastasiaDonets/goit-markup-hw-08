@@ -1,0 +1,137 @@
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: auto;
+
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: fill var(--animation);
+
+  &:hover .menu-btn__icon,
+  &:focus .menu-btn__icon {
+    fill: var(--acent-text-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--secondary-accent-color);
+
+  transform: translateX(100%);
+  transition: var(--animation);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: fill var(--animation);
+
+  &:hover .menu-toggle_icon,
+  &:focus .menu-toggle_icon {
+    fill: var(--acent-text-color);
+  }
+}
+
+.mobile-list {
+  margin-top: 48px;
+  margin-left: 40px;
+  margin-bottom: auto;
+}
+
+.mobile-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-list__link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  transition: color var(--animation);
+
+  &.current {
+    color: var(--acent-text-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--acent-text-color);
+  }
+}
+
+.mobile-contact {
+  margin-left: 40px;
+}
+
+.mobile-contact__link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+}
+
+.mobile-tel {
+  display: block;
+  color: var(--acent-text-color);
+  margin-bottom: 32px;
+}
+
+.mobile-mail {
+  display: block;
+  color: var(--secondary-text-color);
+  margin-bottom: 64px;
+}
+
+.mobile-socials {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+  margin-bottom: 48px;
+}
+
+.mobile-socials__item {
+  padding-right: 10px;
+}
+
+.mobile-socials__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-socials__link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+
+  color: var(--acent-text-color);
+}

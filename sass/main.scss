@@ -1,0 +1,37 @@
+// Utils
+@import './utils/variables.scss';
+
+// Base
+@import './base/base.scss';
+
+// Components
+// Header
+@import './components/header';
+@import './components/menu-btn';
+// Logo
+@import './components/logo';
+// Nav
+@import './components/site-nav';
+// Contacts in header
+@import './components/contacts-in-header';
+// Hero
+@import './components/hero';
+// Features
+@import './components/features';
+// About
+@import './components/about';
+// Team
+@import './components/team';
+// Socials
+@import './components/socials';
+// Clients
+@import './components/clients';
+// Footer
+@import './components/footer';
+
+// Filter-btn
+@import './components/filter';
+// Work-list
+@import './components/work-list';
+// Modal
+@import './components/modal';

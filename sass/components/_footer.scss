@@ -1,0 +1,183 @@
+/* Footer */
+.footer {
+  background-color: var(--secondary-background-color);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+    color: var(--secondary-accent-color);
+    text-align: center;
+  }
+}
+
+.contacts__container {
+  @media screen and (min-width: 768px) {
+    @include flexCenter($type: flex, $main-axis: space-around, $cross-axis: baseline);
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flexCenter($type: flex, $main-axis: space-between, $cross-axis: baseline);
+    gap: 12px;
+  }
+}
+
+.address {
+  font-style: normal;
+  margin-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: var(--secondary-accent-color);
+    transition: color var(--animation);
+  }
+
+  &__link--focused:hover,
+  &__link--focused:focus {
+    color: var(--acent-text-color);
+  }
+
+  &__main {
+    display: block;
+    font-style: normal;
+    transition: color var(--animation);
+  }
+
+  &__link__contact {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--contact-accent-color);
+    transition: color var(--animation);
+  }
+
+  &__link__contact--focused:hover,
+  &__link__contact--focused:focus {
+    color: var(--acent-text-color);
+  }
+}
+
+/* Footer socials */
+.contacts__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contacts__list {
+  @include flexCenter($type: flex);
+  gap: 10px;
+}
+
+.contacts__link {
+  @include flexCenter($type: flex, $main-axis: center, $cross-axis: center);
+  width: 44px;
+  height: 44px;
+  background-color: var(--footer-socials-bg);
+  border-radius: 50%;
+  transition: background-color var(--animation);
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+
+  &--focused:hover {
+    background-color: var(--accent-background-color);
+  }
+}
+
+.contacts__icon {
+  fill: var(--secondary-accent-color);
+}
+
+/* Subscribe */
+.subscribe__title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--secondary-accent-color);
+  text-align: center;
+}
+
+.subscribe__form {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+}
+
+.subscribe__input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  outline: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 481px) {
+    width: 358px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
+}
+
+.subscribe__btn {
+  @include flexCenter($type: flex);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+}
