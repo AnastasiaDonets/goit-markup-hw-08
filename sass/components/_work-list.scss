@@ -15,7 +15,7 @@
 
   &__item {
     @media screen and (max-width: 480px) {
-      flex-basis: calc((100% - var(--work-indent) * var(--work-items)) / (var(--work-items) - 2));
+      width: 100%;
     }
 
     @media screen and (min-width: 768px) {

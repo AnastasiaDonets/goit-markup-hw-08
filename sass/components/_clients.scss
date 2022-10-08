@@ -26,6 +26,10 @@
     );
   }
 
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - var(--work-indent) * var(--work-items)) / var(--work-items));
+  }
+
   @media screen and (min-width: 1200px) {
     flex-basis: calc(
       (100% - var(--work-indent) * (var(--work-items) + 2)) / (var(--work-items) + 3)

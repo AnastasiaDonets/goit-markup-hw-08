@@ -84,12 +84,16 @@
 
   &__title {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 12px;
+    }
   }
 
   &__input {
@@ -162,27 +166,6 @@
   margin-bottom: 30px;
   gap: 8px;
 
-  &__icons__checked {
-    opacity: 0;
-    fill: var(--accent-background-color);
-    transition: opacity var(--animation);
-  }
-
-  &__icons__unchecked {
-    opacity: 1;
-    transition: opacity var(--animation);
-  }
-
-  &__field--focused:focus + &__icons .checkbox__icons__checked,
-  &__field--focused:checked + &__icons .checkbox__icons__checked {
-    opacity: 1;
-  }
-
-  &__field--focused:focus + &__icons .checkbox__icons__unchecked,
-  &__field--focused:checked + &__icons .checkbox__icons__unchecked {
-    opacity: 0;
-  }
-
   &__text {
     font-weight: 400;
     font-size: 12px;
@@ -214,4 +197,23 @@
   &__submit-btn {
     display: block;
   }
+}
+
+.checkbox__icons__checked {
+  opacity: 0;
+  fill: var(--accent-background-color);
+  transition: opacity var(--animation);
+}
+
+.checkbox__field--focused:checked + .checkbox__icons .checkbox__icons__checked {
+  opacity: 1;
+}
+
+.checkbox__icons__unchecked {
+  opacity: 1;
+  transition: opacity var(--animation);
+}
+
+.checkbox__field--focused:checked + .checkbox__icons .checkbox__icons__unchecked {
+  opacity: 0;
 }
